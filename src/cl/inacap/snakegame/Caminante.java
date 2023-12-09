@@ -13,9 +13,9 @@ public class Caminante implements Runnable {
 		estado = true;
 		while (estado) {
 			panel.avanzar();
-			panel.repaint(); //Esta instrucción repinta el snake.
+			panel.repaint(); //Esta instrucciÃ³n repinta el snake.
 			try {
-				Thread.sleep(50); //Esta instrucción realiza una espera en ms (No se ejecuta ninguna instrucción de abajo en una cierta cantidad de tiempo).
+				Thread.sleep(50); //Esta instrucciÃ³n realiza una espera en ms (No se ejecuta ninguna instrucciÃ³n de abajo en una cierta cantidad de tiempo).
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

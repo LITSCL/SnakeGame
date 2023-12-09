@@ -14,8 +14,8 @@ public class PanelSnake extends JPanel{
 	private Color colorSnake = Color.green; 
 	private Color colorComida = Color.red;
 	private int sizePanel, sizeCuadro, cantidadCuadrados; 
-	private List<int[]> snake = new ArrayList<>(); //Aqui se almacenar·n las coordenadas (Pares ordenados) de cada cuadro que componga el snake.
-	private int[] comida = new int[2]; //Aqui se almacenaran las coordenadas de donde aparecer· la comida.
+	private List<int[]> snake = new ArrayList<>(); //Aqui se almacenar√°n las coordenadas (Pares ordenados) de cada cuadro que componga el snake.
+	private int[] comida = new int[2]; //Aqui se almacenaran las coordenadas de donde aparecer√° la comida.
 	private String direccion = "derecha";
 	private String nuevaDireccion = "derecha";
 	private Caminante caminante;
@@ -57,7 +57,7 @@ public class PanelSnake extends JPanel{
 	
 	public void avanzar() {
 		igualarDirecciones();
-		int[] primerCuadradoSnake = snake.get(snake.size() - 1); //El primer cuadrado del snake es el ultimo que se aÒadiÛ a la lista.
+		int[] primerCuadradoSnake = snake.get(snake.size() - 1); //El primer cuadrado del snake es el ultimo que se a√±adi√≥ a la lista.
 		int agregarX = 0;
 		int agregarY = 0;
 		
@@ -76,7 +76,7 @@ public class PanelSnake extends JPanel{
 			break;
 		}
 		
-		int[] nuevoPrimerCuadradoSnake={(primerCuadradoSnake[0] + agregarX), (primerCuadradoSnake[1] + agregarY)}; //Aqui se calculan las coordenadas del nuevo primer cuadrado del snake.
+		int[] nuevoPrimerCuadradoSnake = {(primerCuadradoSnake[0] + agregarX), (primerCuadradoSnake[1] + agregarY)}; //Aqui se calculan las coordenadas del nuevo primer cuadrado del snake.
 		
 		if (nuevoPrimerCuadradoSnake[0] == this.cantidadCuadrados) {
 			nuevoPrimerCuadradoSnake[0] = 0;
@@ -93,7 +93,7 @@ public class PanelSnake extends JPanel{
 		
 		boolean cuadradoPintado = false;
 		for (int i = 0; i < snake.size(); i++) {
-			if (nuevoPrimerCuadradoSnake[0] == snake.get(i)[0] && nuevoPrimerCuadradoSnake[1] == snake.get(i)[1]) { //Aqui se esta consultando si la serpiente se chocÛ.
+			if (nuevoPrimerCuadradoSnake[0] == snake.get(i)[0] && nuevoPrimerCuadradoSnake[1] == snake.get(i)[1]) { //Aqui se esta consultando si la serpiente se choc√≥.
 				cuadradoPintado = true;	
 				break;
 			}
@@ -113,9 +113,9 @@ public class PanelSnake extends JPanel{
 			caminante.run();
 		}
 		else {
-			if (nuevoPrimerCuadradoSnake[0] == comida[0] && nuevoPrimerCuadradoSnake[1] == comida[1]) { //AquÌ se verifica si el snake se comiÛ la comida.
+			if (nuevoPrimerCuadradoSnake[0] == comida[0] && nuevoPrimerCuadradoSnake[1] == comida[1]) { //Aqu√≠ se verifica si el snake se comi√≥ la comida.
 				sta.reproducir("SonidoComida", "wav");
-				snake.add(nuevoPrimerCuadradoSnake); //AquÌ se agranda el snake.
+				snake.add(nuevoPrimerCuadradoSnake); //Aqu√≠ se agranda el snake.
 				generarComida();
 			}
 			else {
@@ -128,12 +128,12 @@ public class PanelSnake extends JPanel{
 	public void generarComida() {
 		boolean existe = false;
 		
-		int x = (int)(Math.random() * cantidadCuadrados); //El mÈtodo random genera un valor random entre 0.0 y 1.0.
-		int y = (int)(Math.random() * cantidadCuadrados); //El mÈtodo random genera un valor random entre 0.0 y 1.0.
+		int x = (int)(Math.random() * cantidadCuadrados); //El m√©todo random genera un valor random entre 0.0 y 1.0.
+		int y = (int)(Math.random() * cantidadCuadrados); //El m√©todo random genera un valor random entre 0.0 y 1.0.
 	
 
 		for (int i = 0; i < snake.size(); i++) {
-			if (snake.get(i)[0] == x && snake.get(i)[1] == y) { //AquÌ se esta consultando si el par ordenado existe dentro del snake.
+			if (snake.get(i)[0] == x && snake.get(i)[1] == y) { //Aqu√≠ se esta consultando si el par ordenado existe dentro del snake.
 				existe = true;
 				generarComida();
 				break;
