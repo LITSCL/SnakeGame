@@ -5,7 +5,7 @@ public class Caminante implements Runnable {
 	boolean estado = true;
 	
 	public Caminante(PanelSnake panel) {
-		this.panel=panel;
+		this.panel = panel;
 	}
 	
 	@Override
@@ -22,8 +22,7 @@ public class Caminante implements Runnable {
 		}
 	}
 	
-	public void stop(){
+	public void stop() {
 		this.estado = false;
 	}
-	
 }

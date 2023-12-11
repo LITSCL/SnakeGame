@@ -74,5 +74,4 @@ public class StartGame extends JFrame {
 		
 		this.requestFocus(true);
 	}
-
 }

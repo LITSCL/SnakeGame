@@ -62,18 +62,18 @@ public class PanelSnake extends JPanel{
 		int agregarY = 0;
 		
 		switch(direccion) {
-		case "derecha":
-			agregarX = 1;
-			break;
-		case "izquierda":
-			agregarX = -1;
-			break;
-		case "arriba":
-			agregarY = -1;
-			break;
-		case "abajo":
-			agregarY = 1;
-			break;
+			case "derecha":
+				agregarX = 1;
+				break;
+			case "izquierda":
+				agregarX = -1;
+				break;
+			case "arriba":
+				agregarY = -1;
+				break;
+			case "abajo":
+				agregarY = 1;
+				break;
 		}
 		
 		int[] nuevoPrimerCuadradoSnake = {(primerCuadradoSnake[0] + agregarX), (primerCuadradoSnake[1] + agregarY)}; //Aqui se calculan las coordenadas del nuevo primer cuadrado del snake.
