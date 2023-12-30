@@ -61,7 +61,7 @@ public class PanelSnake extends JPanel{
 		int agregarX = 0;
 		int agregarY = 0;
 		
-		switch(direccion) {
+		switch (direccion) {
 			case "derecha":
 				agregarX = 1;
 				break;
